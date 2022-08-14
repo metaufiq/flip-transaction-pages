@@ -1,7 +1,7 @@
 import { TransactionObject } from "../../index.types";
 import APIServices from "../configs/api";
 
-const getListTransaction = async (): Promise<{data: TransactionObject}> => {
+const getListTransaction = async (): Promise<TransactionObject> => {
   const { data } = await APIServices.RecruitmentTest.get('/frontend-test');
 
   return data;

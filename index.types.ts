@@ -17,6 +17,9 @@ export type Transaction = {
   completed_at: string,
   fee:number
 }
-export type TransactionObject = {
+
+export type TransactionsObject = {
   [id:TransactionId]: Transaction
 }
+
+export type TransactionsList = Transaction[]

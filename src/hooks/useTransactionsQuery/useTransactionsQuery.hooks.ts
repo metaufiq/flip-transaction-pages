@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { TransactionsList, TransactionsObject } from "../../../index.types";
 import api from "../../api";
-import { SetToTransactionList } from "./useTransactionsQuery.hooks.types";
+import { SetTransactionsObject } from "./useTransactionsQuery.hooks.types";
 
 const _getListTransaction = async ()=>{
   const data = await api.recruitmentTest.getListTransaction();
@@ -10,17 +10,17 @@ const _getListTransaction = async ()=>{
   return data;
 }
 
-const _asyncInnit = async (setToTransactionList: SetToTransactionList)=>{
+const _asyncInnit = async (setTransactionsObject: SetTransactionsObject)=>{
   const transactions = await _getListTransaction()
 
-  setToTransactionList(transactions)
+  setTransactionsObject(transactions)
 }
-
-const useInnit = (setToTransactionList: SetToTransactionList)=>{
+const useInnit = (setTransactionsObject: SetTransactionsObject)=>{
   useEffect(()=>{
-    _asyncInnit(setToTransactionList)
+    _asyncInnit(setTransactionsObject)
   }, []);
 }
+
 
 const useTransactionsQuery = () => {
   const [objectTransactions, setObjectTransactions] = useState<TransactionsObject>({});

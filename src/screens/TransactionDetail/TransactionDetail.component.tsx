@@ -1,11 +1,16 @@
 import React from "react";
-import { Text, View } from "react-native";
-import styles from "./TransactionDetail.component.styles";
+import { View } from "react-native";
 
-const TransactionDetail = () =>{
+import TransactionDetailCard from "../../components/TransactionDetailCard";
+import styles from "./TransactionDetail.component.styles";
+import { Props } from "./TransactionDetail.component.types";
+
+const TransactionDetail = (props:Props) =>{
+  const {transaction} = props.route.params
+
   return (
     <View style={styles.container}>
-      <Text>Transaction Detail Screen</Text>
+      <TransactionDetailCard transaction={transaction}></TransactionDetailCard>
     </View>
   );
 }

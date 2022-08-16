@@ -3,8 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TransactionList from './src/screens/TransactionList';
 import TransactionDetail from './src/screens/TransactionDetail';
+import { RootStackParamList } from './index.types';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const App = () => {
 

@@ -7,9 +7,10 @@ import TransactionCard from "../../components/TransactionCard";
 import useTransactions from "../../hooks/useTransactions/useTransactions.hooks";
 import { SetToTransactionList } from "../../hooks/useTransactions/useTransactions.hooks.types";
 import styles from "./TransactionList.component.styles";
+import { Props } from "./TransactionList.component.types";
 
-const _onPressTransactionCard = ()=>{
-
+const _onPressTransactionCard = (props:Props, transaction: Transaction)=>()=>{
+  props.navigation.push('TransactionDetail', {transaction})
 }
 
 const _getListTransaction = async ()=>{
@@ -24,8 +25,8 @@ const _asyncInnit = async (setToTransactionList: SetToTransactionList)=>{
   setToTransactionList(transactions)
 }
 
-const _renderTransactionList:ListRenderItem<Transaction> = ({item})=>(
-  <TransactionCard transaction={item} key={item.id} onPress={_onPressTransactionCard}/>
+const _renderTransactionList:(props:Props)=>ListRenderItem<Transaction> = (props:Props) =>({item})=>(
+  <TransactionCard transaction={item} key={item.id} onPress={_onPressTransactionCard(props, item)}/>
 )
 
 const useInnit = (setToTransactionList: SetToTransactionList)=>{
@@ -34,16 +35,16 @@ const useInnit = (setToTransactionList: SetToTransactionList)=>{
   }, []);
 }
 
-const TransactionList = () =>{
+const TransactionList = (props: Props) =>{
   const [transactionList, setToTransactionList] = useTransactions();
-
+  
   useInnit(setToTransactionList)
 
   return (
     <View style={styles.container}>
       <FlatList
         data={transactionList}
-        renderItem={_renderTransactionList}
+        renderItem={_renderTransactionList(props)}
       />
     </View>
   );

@@ -1,6 +1,5 @@
-export type TransactionStatus = {
-  status: "PENDING" | "SUCCESS"
-}
+export type TransactionStatus = "PENDING" | "SUCCESS"
+
 export type TransactionId = string
 
 export type Transaction = {
@@ -23,3 +22,5 @@ export type TransactionsObject = {
 }
 
 export type TransactionsList = Transaction[]
+
+export type VoidFunction = ()=>void

@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectInputSnapshot should render select input 1`] = `
+Array [
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={false}
+  />,
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+  >
+    <Text
+      style={
+        Object {
+          "color": "#fd6542",
+        }
+      }
+    >
+      label
+    </Text>
+  </View>,
+]
+`;

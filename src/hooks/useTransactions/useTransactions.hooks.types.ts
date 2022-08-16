@@ -1,6 +1,4 @@
-import { TransactionsList, TransactionsObject } from "../../../index.types";
-
-export type SetToTransactionList = React.Dispatch<React.SetStateAction<TransactionsObject>>
+import { TransactionsList } from "../../../index.types";
 
 export type Params = {
   initialValue: TransactionsList

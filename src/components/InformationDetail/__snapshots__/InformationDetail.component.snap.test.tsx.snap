@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InformationDetailSnapshot should render information detail 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "fontWeight": "bold",
+      }
+    }
+  >
+    header
+  </Text>
+  <Text>
+    content
+  </Text>
+</View>
+`;

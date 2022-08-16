@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionDetailCardSnapshot should render pending transaction card 1`] = `
+<View
+  style={Object {}}
+>
+  <Text>
+    ID TRANSAKSI: #
+    1231
+  </Text>
+  <Text>
+    DETAIL TRANSAKSI
+  </Text>
+  <Text>
+    SENDER Bank
+     → 
+    BENEF Bank
+  </Text>
+  <View>
+    <View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        BENEF Name
+      </Text>
+      <Text>
+        account number
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        NOMINAL
+      </Text>
+      <Text>
+        10000
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        BERITA TRANSFER
+      </Text>
+      <Text>
+        remark
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        KODE UNIK
+      </Text>
+      <Text>
+        124
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        WAKTU DIBUAT
+      </Text>
+      <Text>
+        07-07-2020
+      </Text>
+    </View>
+  </View>
+  <View>
+    <Text>
+      PENDING
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`TransactionDetailCardSnapshot should render success transaction card 1`] = `
+<View
+  style={Object {}}
+>
+  <Text>
+    ID TRANSAKSI: #
+    1231
+  </Text>
+  <Text>
+    DETAIL TRANSAKSI
+  </Text>
+  <Text>
+    SENDER Bank
+     → 
+    BENEF Bank
+  </Text>
+  <View>
+    <View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        BENEF Name
+      </Text>
+      <Text>
+        account number
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        NOMINAL
+      </Text>
+      <Text>
+        10000
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        BERITA TRANSFER
+      </Text>
+      <Text>
+        remark
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        KODE UNIK
+      </Text>
+      <Text>
+        124
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        WAKTU DIBUAT
+      </Text>
+      <Text>
+        07-07-2020
+      </Text>
+    </View>
+  </View>
+  <View>
+    <Text>
+      SUCCESS
+    </Text>
+  </View>
+</View>
+`;

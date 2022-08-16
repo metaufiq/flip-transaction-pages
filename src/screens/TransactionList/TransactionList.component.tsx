@@ -4,6 +4,8 @@ import { FlatList, ListRenderItem, View } from "react-native";
 import { Transaction } from "../../../index.types";
 import SearchInput from "../../components/SearchInput";
 import TransactionCard from "../../components/TransactionCard";
+import useTransactions from "../../hooks/useTransactions/useTransactions.hooks";
+import { Params as UseTransactionsParams } from "../../hooks/useTransactions/useTransactions.hooks.types";
 import useTransactionsQuery from "../../hooks/useTransactionsQuery/useTransactionsQuery.hooks";
 import styles from "./TransactionList.component.styles";
 import { Props } from "./TransactionList.component.types";
@@ -19,7 +21,12 @@ const _renderTransactionList:(props:Props)=>ListRenderItem<Transaction> = (props
 )
 
 const TransactionList = (props: Props) =>{
-  const {transactions} = useTransactionsQuery();
+  const {transactions : queryResult} = useTransactionsQuery();
+
+  const useTransactionsParams:UseTransactionsParams = {
+    initialValue: queryResult
+  }
+  const {transactions} = useTransactions(useTransactionsParams);
 
   return (
     <View style={styles.container}>

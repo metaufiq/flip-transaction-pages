@@ -1,17 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-import { TransactionsList, TransactionsObject } from "../../../index.types";
+import { TransactionsList } from "../../../index.types";
+import { Params } from "./useTransactions.hooks.types";
 
-const useTransactions = ()=>{
-  const [objectTransactions, setObjectTransactions] = useState<TransactionsObject>({});
-  const [transactions, setTransactions] = useState<TransactionsList>([]);
+const useTransactions = ({initialValue}: Params)=>{
+  const [transactions] = useState<TransactionsList>(initialValue);
 
-  useEffect(()=>{
-    setTransactions(Object.keys(objectTransactions).map(key=> objectTransactions[key]))
-  }
-  ,[objectTransactions])
-
-  return [transactions, setObjectTransactions] as const
+  return {transactions}
 }
 
 export default useTransactions;

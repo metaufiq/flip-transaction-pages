@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionCardSnapshot should render pending transaction card 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "flexDirection": "row",
+        "marginBottom": 5,
+      }
+    }
+  >
+    <View>
+      <Text>
+        SENDER Bank
+         → 
+        BENEF Bank
+      </Text>
+      <Text>
+        BENEF Name
+      </Text>
+      <Text>
+        11000
+         • 
+        07-07-2020
+      </Text>
+    </View>
+    <View>
+      <Text>
+        PENDING
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TransactionCardSnapshot should render success transaction card 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "flexDirection": "row",
+        "marginBottom": 5,
+      }
+    }
+  >
+    <View>
+      <Text>
+        SENDER Bank
+         → 
+        BENEF Bank
+      </Text>
+      <Text>
+        BENEF Name
+      </Text>
+      <Text>
+        11000
+         • 
+        07-07-2020
+      </Text>
+    </View>
+    <View>
+      <Text>
+        SUCCESS
+      </Text>
+    </View>
+  </View>
+</View>
+`;

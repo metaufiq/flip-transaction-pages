@@ -3,6 +3,7 @@ import { FlatList, ListRenderItem, View } from "react-native";
 
 import { Transaction } from "../../../index.types";
 import api from "../../api";
+import SearchInput from "../../components/SearchInput";
 import TransactionCard from "../../components/TransactionCard";
 import useTransactions from "../../hooks/useTransactions/useTransactions.hooks";
 import { SetToTransactionList } from "../../hooks/useTransactions/useTransactions.hooks.types";
@@ -25,6 +26,8 @@ const _asyncInnit = async (setToTransactionList: SetToTransactionList)=>{
   setToTransactionList(transactions)
 }
 
+const _onSearch = ()=>{}
+
 const _renderTransactionList:(props:Props)=>ListRenderItem<Transaction> = (props:Props) =>({item})=>(
   <TransactionCard transaction={item} key={item.id} onPress={_onPressTransactionCard(props, item)}/>
 )
@@ -42,6 +45,10 @@ const TransactionList = (props: Props) =>{
 
   return (
     <View style={styles.container}>
+      <View style={styles.searchInputContainer}>
+        <SearchInput onChange={_onSearch} placeholder='Cari nama, bank, atau nominal'/>
+      </View>
+      
       <FlatList
         data={transactionList}
         renderItem={_renderTransactionList(props)}

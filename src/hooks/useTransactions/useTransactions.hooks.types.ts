@@ -1,3 +1,8 @@
-import { TransactionsObject } from "../../../index.types";
+import { TransactionsList, Transaction } from "../../../index.types";
 
-export type SetToTransactionList = React.Dispatch<React.SetStateAction<TransactionsObject>>
+export type Params = {
+  initialValue: TransactionsList
+  searchInput?: string
+}
+
+export type FilterKey =  'amount' | 'beneficiary_name' | 'sender_bank' | 'beneficiary_bank';

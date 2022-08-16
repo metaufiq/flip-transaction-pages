@@ -1,3 +1,5 @@
+import { ScreenStackProps } from "react-native-screens"
+
 export type TransactionStatus = "PENDING" | "SUCCESS"
 
 export type TransactionId = string
@@ -24,3 +26,8 @@ export type TransactionsObject = {
 export type TransactionsList = Transaction[]
 
 export type VoidFunction = ()=>void
+
+export type RootStackParamList = {
+  TransactionList: undefined;
+  TransactionDetail: {transaction: Transaction};
+};

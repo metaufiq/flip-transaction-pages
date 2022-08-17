@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LabelSnapshot should render primary label 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "borderRadius": 10,
+        "borderWidth": 1,
+        "padding": 10,
+      },
+      Object {
+        "backgroundColor": "white",
+        "borderColor": "#fd6542",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontWeight": "bold",
+        },
+        Object {
+          "color": "black",
+        },
+      ]
+    }
+  >
+    value
+  </Text>
+</View>
+`;
+
+exports[`LabelSnapshot should render success label 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "borderRadius": 10,
+        "borderWidth": 1,
+        "padding": 10,
+      },
+      Object {
+        "backgroundColor": "#4fb785",
+        "borderColor": "#4fb785",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontWeight": "bold",
+        },
+        Object {
+          "color": "white",
+        },
+      ]
+    }
+  >
+    value
+  </Text>
+</View>
+`;

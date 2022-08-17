@@ -1,11 +1,17 @@
 import { assertSnapshots } from "../../../test";
-import SearchInput from ".";
-import { Props } from "./SearchInput.component.types";
+import SearchBox from ".";
+import { Props } from "./SearchBox.component.types";
 
-describe('SearchInputSnapshot', () => {
+describe('SearchBoxSnapshot', () => {
 
   const mockProps:Props = {
-    onChange: ()=>{}
+    onChangeSort:()=>{},
+    onChangeSearch:()=>{},
+    sortLabel: 'label',
+    options: [{
+      label: 'label',
+      value: 'value'
+    }]
   };
 
   const configs = [
@@ -19,5 +25,5 @@ describe('SearchInputSnapshot', () => {
     },
   ];
 
-  assertSnapshots(SearchInput, configs);
+  assertSnapshots(SearchBox, configs);
 });

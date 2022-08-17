@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { FlatList, ListRenderItem, View } from "react-native";
 
 import { Transaction } from "../../../index.types";
-import SearchInput from "../../components/SearchInput";
-import SelectInput from "../../components/SelectInput";
+import SearchBox from "../../components/SearchBox";
 import { Option } from "../../components/SelectInput/SelectInput.component.types";
 import TransactionCard from "../../components/TransactionCard";
 import useTransactions from "../../hooks/useTransactions/useTransactions.hooks";
@@ -33,8 +32,6 @@ const _renderTransactionList:(props:Props)=>ListRenderItem<Transaction> = (props
 )
 
 const _onSelectSortCondition = (setSortCondition: SetSortCondition)=>(value:string)=>{
-  console.log({value});
-  
   setSortCondition(value as SortCondition)
 }
 
@@ -53,11 +50,17 @@ const TransactionList = (props: Props) =>{
   return (
     <View style={styles.container}>
       <View style={styles.searchInputContainer}>
-        <SearchInput onChange={_onSearch(setSearchInput)} placeholder='Cari nama, bank, atau nominal'/>
+        <SearchBox
+          placeholder='Cari nama, bank, atau nominal'
+          sortLabel="URUTKAN" 
+          onChangeSearch={_onSearch(setSearchInput)} 
+          onChangeSort={_onSelectSortCondition(setSortCondition)} 
+          options={OPTIONS_SORT}
+        />
       </View>
-        <SelectInput label="URUTKAN" onChange={_onSelectSortCondition(setSortCondition)} options={OPTIONS_SORT} />
       <FlatList
         data={transactions}
+        showsVerticalScrollIndicator={false}
         renderItem={_renderTransactionList(props)}
       />
     </View>

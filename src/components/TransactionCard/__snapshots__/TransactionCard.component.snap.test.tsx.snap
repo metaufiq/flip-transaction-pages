@@ -20,32 +20,88 @@ exports[`TransactionCardSnapshot should render pending transaction card 1`] = `
 >
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "white",
-        "flexDirection": "row",
-        "marginBottom": 5,
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "borderLeftColor": "#fd6542",
+          "borderLeftWidth": 10,
+          "borderRadius": 10,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 10,
+          "paddingLeft": 5,
+          "paddingRight": 5,
+          "paddingVertical": 25,
+        },
+        Object {
+          "borderLeftColor": "#fd6542",
+        },
+      ]
     }
   >
     <View>
-      <Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }
+      >
         SENDER Bank
          → 
         BENEF Bank
       </Text>
-      <Text>
-        BENEF Name
+      <Text
+        style={
+          Object {
+            "fontWeight": "500",
+          }
+        }
+      >
+        BENEF NAME
       </Text>
-      <Text>
-        11000
+      <Text
+        style={
+          Object {
+            "fontWeight": "500",
+          }
+        }
+      >
+        Rp11.000
          • 
-        07-07-2020
+        7 August 2020
       </Text>
     </View>
-    <View>
-      <Text>
-        PENDING
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 10,
+            "borderWidth": 1,
+            "padding": 10,
+          },
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#fd6542",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "fontWeight": "bold",
+            },
+            Object {
+              "color": "black",
+            },
+          ]
+        }
+      >
+        Pengecekkan
       </Text>
     </View>
   </View>
@@ -72,32 +128,88 @@ exports[`TransactionCardSnapshot should render success transaction card 1`] = `
 >
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "white",
-        "flexDirection": "row",
-        "marginBottom": 5,
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "borderLeftColor": "#fd6542",
+          "borderLeftWidth": 10,
+          "borderRadius": 10,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 10,
+          "paddingLeft": 5,
+          "paddingRight": 5,
+          "paddingVertical": 25,
+        },
+        Object {
+          "borderLeftColor": "#4fb785",
+        },
+      ]
     }
   >
     <View>
-      <Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }
+      >
         SENDER Bank
          → 
         BENEF Bank
       </Text>
-      <Text>
-        BENEF Name
+      <Text
+        style={
+          Object {
+            "fontWeight": "500",
+          }
+        }
+      >
+        BENEF NAME
       </Text>
-      <Text>
-        11000
+      <Text
+        style={
+          Object {
+            "fontWeight": "500",
+          }
+        }
+      >
+        Rp11.000
          • 
-        07-07-2020
+        7 August 2020
       </Text>
     </View>
-    <View>
-      <Text>
-        SUCCESS
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 10,
+            "borderWidth": 1,
+            "padding": 10,
+          },
+          Object {
+            "backgroundColor": "#4fb785",
+            "borderColor": "#4fb785",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "fontWeight": "bold",
+            },
+            Object {
+              "color": "white",
+            },
+          ]
+        }
+      >
+        Berhasil
       </Text>
     </View>
   </View>

@@ -60,6 +60,7 @@ const TransactionList = (props: Props) =>{
       </View>
       <FlatList
         data={transactions}
+        showsVerticalScrollIndicator={false}
         renderItem={_renderTransactionList(props)}
       />
     </View>

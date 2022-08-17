@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
     borderLeftWidth: 10,
     borderLeftColor: colors.primary,
     justifyContent: 'space-between',
-    paddingRight: 15,
-    paddingLeft: 25,
+    paddingRight: 5,
+    paddingLeft: 5,
     paddingVertical: 25,
   },
   bankInformation:{

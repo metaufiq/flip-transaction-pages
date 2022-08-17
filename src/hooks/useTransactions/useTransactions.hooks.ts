@@ -41,12 +41,10 @@ const _sortByCondition = (sortCondition:SortCondition)=> (current: Transaction, 
 
   switch (sortCondition) {
     case 'A-Z':
-      console.log({current, next});
-      
-      return current.beneficiary_name.localeCompare(next.beneficiary_name);
+      return next.beneficiary_name.localeCompare(current.beneficiary_name);
 
     case 'Z-A':
-      return next.beneficiary_name.localeCompare(current.beneficiary_name);
+      return current.beneficiary_name.localeCompare(next.beneficiary_name);
     
     case 'NEWEST_DATE':
       return current.completed_at >= next.completed_at ? 1 : -1;

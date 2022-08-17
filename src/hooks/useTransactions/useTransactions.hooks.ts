@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { SetTransactionsList, Transaction, TransactionsList } from "../../../index.types";
-import { FilterKey, Params } from "./useTransactions.hooks.types";
+import { FilterKey, Params, SortCondition } from "./useTransactions.hooks.types";
 
 
 const FILTER_KEYS:FilterKey[] = ['amount', 'beneficiary_name', 'sender_bank', 'beneficiary_bank'];
@@ -25,7 +25,7 @@ const filterByKeys = (searchInput: string)=>(transaction:Transaction) => {
   })
 }
 
-const useUpdateTransaction = ({searchInput, initialValue}: Params, setTransactions: SetTransactionsList)=>{
+const useSearch = ({searchInput, initialValue}: Params, setTransactions: SetTransactionsList)=>{
 
   useEffect(()=>{
     
@@ -36,12 +36,43 @@ const useUpdateTransaction = ({searchInput, initialValue}: Params, setTransactio
   }, [searchInput])
 }
 
+const _sortByCondition = (sortCondition:SortCondition)=> (current: Transaction, next: Transaction)=>{
+  if (!sortCondition) return 1
+
+  switch (sortCondition) {
+    case 'A-Z':
+      console.log({current, next});
+      
+      return current.beneficiary_name.localeCompare(next.beneficiary_name);
+
+    case 'Z-A':
+      return next.beneficiary_name.localeCompare(current.beneficiary_name);
+    
+    case 'NEWEST_DATE':
+      return current.completed_at >= next.completed_at ? 1 : -1;
+    
+    case 'OLDEST_DATE':
+      return current.completed_at < next.completed_at ? 1 : -1;
+
+    default:
+      return 1;
+  }
+}
+
+const useSort = ({sortCondition, initialValue}: Params, setTransactions: SetTransactionsList)=>{
+
+  useEffect(()=>{
+    
+    setTransactions(initialValue.sort(_sortByCondition(sortCondition)))
+  }, [sortCondition])
+}
+
 const useTransactions = (params: Params)=>{
   const [transactions, setTransactions] = useState<TransactionsList>([]);
 
   useInnit(params.initialValue, setTransactions)
-
-  useUpdateTransaction(params, setTransactions)
+  useSearch(params, setTransactions)
+  useSort(params, setTransactions)
 
   return {transactions}
 }

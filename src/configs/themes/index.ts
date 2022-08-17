@@ -2,7 +2,8 @@ import { TextStyle } from "react-native"
 
 export const colors = {
   primary: '#fd6542',
-  success: '#4fb785'
+  success: '#4fb785',
+  background: '#f5f9f8'
 }
 
 export const fontSize = {

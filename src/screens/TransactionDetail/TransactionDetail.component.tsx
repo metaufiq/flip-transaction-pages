@@ -10,7 +10,10 @@ const TransactionDetail = (props:Props) =>{
 
   return (
     <View style={styles.container}>
-      <TransactionDetailCard transaction={transaction}></TransactionDetailCard>
+      <TransactionDetailCard 
+        transaction={transaction} 
+        onClose={props.navigation.goBack}
+      />
     </View>
   );
 }

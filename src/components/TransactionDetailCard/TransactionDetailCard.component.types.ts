@@ -1,5 +1,6 @@
-import { Transaction } from "../../../index.types";
+import { Transaction, VoidFunction } from "../../../index.types";
 
 export interface Props{
-  transaction: Transaction
+  transaction: Transaction,
+  onClose: VoidFunction
 }

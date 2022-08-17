@@ -35,7 +35,8 @@ describe('TransactionDetailCardSnapshot', () => {
   };
 
   const mockProps:Props = {
-    transaction: mockSuccessTransaction
+    transaction: mockSuccessTransaction,
+    onClose: ()=>{}
   };
 
   const configs = [

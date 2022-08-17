@@ -47,10 +47,10 @@ const _sortByCondition = (sortCondition:SortCondition)=> (current: Transaction, 
       return current.beneficiary_name.localeCompare(next.beneficiary_name);
     
     case 'NEWEST_DATE':
-      return current.completed_at >= next.completed_at ? 1 : -1;
+      return new Date(next.completed_at).getTime() - new Date(current.completed_at).getTime();
     
     case 'OLDEST_DATE':
-      return current.completed_at < next.completed_at ? 1 : -1;
+      return new Date(current.completed_at).getTime() - new Date(next.completed_at).getTime();
 
     default:
       return 1;

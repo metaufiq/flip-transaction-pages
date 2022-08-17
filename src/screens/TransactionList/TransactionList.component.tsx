@@ -7,7 +7,7 @@ import SelectInput from "../../components/SelectInput";
 import { Option } from "../../components/SelectInput/SelectInput.component.types";
 import TransactionCard from "../../components/TransactionCard";
 import useTransactions from "../../hooks/useTransactions/useTransactions.hooks";
-import { Params as UseTransactionsParams } from "../../hooks/useTransactions/useTransactions.hooks.types";
+import { Params as UseTransactionsParams, SortCondition } from "../../hooks/useTransactions/useTransactions.hooks.types";
 import useTransactionsQuery from "../../hooks/useTransactionsQuery/useTransactionsQuery.hooks";
 import styles from "./TransactionList.component.styles";
 import { Props, SetSearchInput, SetSortCondition } from "./TransactionList.component.types";
@@ -33,17 +33,20 @@ const _renderTransactionList:(props:Props)=>ListRenderItem<Transaction> = (props
 )
 
 const _onSelectSortCondition = (setSortCondition: SetSortCondition)=>(value:string)=>{
-  setSortCondition(value)
+  console.log({value});
+  
+  setSortCondition(value as SortCondition)
 }
 
 const TransactionList = (props: Props) =>{
   const {transactions : queryResult} = useTransactionsQuery();
-  const [sortCondition, setSortCondition] = useState<string>();
+  const [sortCondition, setSortCondition] = useState<SortCondition>();
   const [searchInput, setSearchInput] = useState<string>();
 
   const useTransactionsParams:UseTransactionsParams = {
     initialValue: queryResult,
-    searchInput
+    searchInput,
+    sortCondition
   }
   const {transactions} = useTransactions(useTransactionsParams);
 

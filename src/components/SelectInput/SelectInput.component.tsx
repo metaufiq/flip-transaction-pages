@@ -27,7 +27,9 @@ const SelectInput = (props: Props)=>{
           <View style={styles.modalView}>
                 {props.options.map(option=>(
                   <Pressable onPress={_onSelectOption(props,option.value, setShowModal)}>
-                    <Text>{option.label}</Text>
+                    <View style={styles.optionContainer}>
+                      <Text>{option.label}</Text>
+                    </View>
                   </Pressable>
                 ))}
           </View>

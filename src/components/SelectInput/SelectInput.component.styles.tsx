@@ -26,6 +26,9 @@ const styles = StyleSheet.create({
   },
   label: {
     color: colors.primary
+  },
+  optionContainer:{
+    padding: 10
   }
 })
 
